@@ -62,12 +62,28 @@ body * {
 }
 
 /* Switch */
+#switch {
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+
 #switch button {
+    position: absolute;
+    z-index: 1;
     width: 32px;
     height: 32px;
     border: 0;
     border-radius: 50%;
     background: var(--switch-bg-url) no-repeat white center;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.light #switch button {
+    right: 0;
+    left: initial;
 }
 
 #switch span {
